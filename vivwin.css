@@ -1,0 +1,138 @@
+/*********************************************************************
+
+Мимикрируем браузер Vivaldi под браузер Arc. Под штатную темную тему Vivaldi. 
+
+###############################
+
+top bar 
+верхняя панель
+
+**********************************************************************/
+.mainbar {
+    border-bottom: 1px solid transparent;
+    padding-left: 13px;
+    height: 32px;
+}
+
+#browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar), 
+#browser.linux.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+    min-height: calc(32px / var(--uiZoomLevel));
+}
+
+.ToolbarButtonPopup-DefaultStyles {
+    top: 43px !important;
+}
+
+.button-popup-center {
+    top: 40px !important;
+}
+
+/*
+
+скрываем элементы в разынх частях интерфейса
+hiding elements in different parts of the interface
+
+*/
+.vivaldi,
+.expand-arrow,
+.button-toolbar-menu-indicator.disabled,
+.button-popup-pos-below::before,
+.ToolbarButtonPopup-DefaultStyles::before
+{
+    display: none !important;
+}
+
+.button-toolbar.workspace-popup {
+    margin-top: 10px;
+}
+
+.toolbar-large .button-toolbar .button-icon:not(.favicon), 
+.toolbar-large .button-toolbar .button-icon svg, 
+.toolbar-medium .button-toolbar .button-icon:not(.favicon), 
+.toolbar-medium .button-toolbar .button-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.toolbar-divider.button-toolbar .button-icon:not(.favicon), 
+.toolbar-divider.button-toolbar .button-icon svg, 
+.toolbar-insideinput .button-toolbar .button-icon:not(.favicon), 
+.toolbar-insideinput .button-toolbar .button-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.toolbar-mainbar .toolbar-extensions > .button-toolbar > button, 
+.toolbar-mainbar .page-zoom-controls > .button-toolbar > button, 
+.toolbar-mainbar > .button-toolbar > button, 
+.toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button, 
+.toolbar-mainbar .page-zoom-controls > .toolbar-group > .button-toolbar > button, 
+.toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+    border: 0;
+    border-radius: 0;
+    min-width: 34px;
+    color: inherit;
+    padding: 0;
+    height: 30px;
+}
+
+.disable-titlebar#browser.win .window-buttongroup {
+    height: 32px;
+}
+
+/*
+
+панель вкладок
+the Tab bar
+
+*/
+#tabs-tabbar-container {
+    padding: 10px 2px 0 0;
+    border-top: 1px solid #555;
+    margin: 12px 15px 0;
+}
+
+.color-behind-tabs-on .SearchField:focus-within, 
+.color-behind-tabs-on .MailSearchField-Inner:focus-within, 
+.color-behind-tabs-on .UrlBar-AddressField:focus-within {
+    outline: 0px solid var(--colorHighlightBg);
+    outline-offset: 0px;
+}
+
+#browser .tab-position .tab.active {
+    background-color: var(--colorAccentBgAlpha) !important;
+}
+
+/*
+
+область просмотра
+viewing area
+
+*/
+#webpage-stack {
+    border-radius: 5px;
+}
+
+.button-textonly.StatusInfo {
+    padding-left: 183px !important;
+}
+
+/*********************************************************************
+
+redefining styles for third-party themes
+переопределяем стили под сторонние темы
+
+**********************************************************************/
+/*
+Moonlight
+*/
+.color-behind-tabs-off .mainbar {
+    color: var(--colorAccentFg);
+    background: none;
+    border-color: none;
+    border: none;
+}
+
+#tabs-tabbar-container {
+    border-top: 1px solid lightgray !important;
+}
