@@ -33,3 +33,12 @@ vivwinn.css is made for a standard dark theme. If you want to fit another one, j
 9.    Background: Type > color #2e2f37
 10.   Settings: turn on the "Transparent background tabs"
 11. Also change the location of the tabs on the left and turn off the status bar.
+
+###
+
+![Снимок экрана 2024-09-02 155632](https://github.com/user-attachments/assets/7cdeccaa-3d73-40eb-af33-93c9cf49bcb4)
+###
+![Снимок экрана 2024-09-02 160207](https://github.com/user-attachments/assets/04f9f020-6e81-49ec-8600-e6d55ef74b38)
+
+
+
