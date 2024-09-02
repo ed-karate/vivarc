@@ -3,7 +3,7 @@ Making Vivaldi look like Arс
 
 Используется штатный функционал изменения интерфейса браузера Vivaldi через css, не затрагивая файлы самой программы.
 vivwinn.css сделан для стандартной темной темы. Если хотите подогнать под другую, просто переопределите стили в этом же файле ниже.
-
+###
 The standard functionality of changing the interface of the Vivaldi browser via css is used, without affecting the files of the program itself.
 vivwinn.css is made for a standard dark theme. If you want to fit another one, just redefine the styles in the same file below.
 
@@ -19,6 +19,8 @@ vivwinn.css is made for a standard dark theme. If you want to fit another one, j
 9.    Фон: Тип > цвет #2e2f37
 10.   Настройки:  включаем "Прозрачные фоновые вкладки"
 11. Так же меняем расположение вкладок слева и выключаем строку состояния.
+
+###
 
 1. Open vivaldi://experiments
 2. Enable "Allow for using CSS modifications"
