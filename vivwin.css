@@ -123,16 +123,3 @@ redefining styles for third-party themes
 переопределяем стили под сторонние темы
 
 **********************************************************************/
-/*
-Moonlight
-*/
-.color-behind-tabs-off .mainbar {
-    color: var(--colorAccentFg);
-    background: none;
-    border-color: none;
-    border: none;
-}
-
-#tabs-tabbar-container {
-    border-top: 1px solid lightgray !important;
-}
