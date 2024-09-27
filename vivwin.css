@@ -1,31 +1,10 @@
-/*********************************************************************
+/*
 
-Мимикрируем браузер Vivaldi под браузер Arc. Под штатную темную тему Vivaldi. 
+arc colors:
+#282537 - основной
+#e0e1fe - шрифты
 
-###############################
-
-top bar 
-верхняя панель
-
-**********************************************************************/
-.mainbar {
-    border-bottom: 1px solid transparent;
-    padding-left: 13px;
-    height: 32px;
-}
-
-#browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar), 
-#browser.linux.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
-    min-height: calc(32px / var(--uiZoomLevel));
-}
-
-.ToolbarButtonPopup-DefaultStyles {
-    top: 43px !important;
-}
-
-.button-popup-center {
-    top: 40px !important;
-}
+*/
 
 /*
 
@@ -33,7 +12,12 @@ top bar
 hiding elements in different parts of the interface
 
 */
-.vivaldi,
+.pageload-indicator,
+.pageload-ticker,
+.create-qr-code,
+.pageload .progress-done,
+.drop-down-menu,
+.BookmarkButton,
 .expand-arrow,
 .button-toolbar-menu-indicator.disabled,
 .button-popup-pos-below::before,
@@ -42,16 +26,55 @@ hiding elements in different parts of the interface
     display: none !important;
 }
 
-.button-toolbar.workspace-popup {
-    margin-top: 10px;
+.mainbar {
+    border-bottom: none !important;
 }
 
-.toolbar-large .button-toolbar .button-icon:not(.favicon), 
-.toolbar-large .button-toolbar .button-icon svg, 
-.toolbar-medium .button-toolbar .button-icon:not(.favicon), 
-.toolbar-medium .button-toolbar .button-icon svg {
-    width: 26px;
-    height: 26px;
+.mainbar .toolbar-mainbar {
+    height: 30px;
+}
+
+button.vivaldi {
+    margin: 0 0 0 1px !important;
+    height: 26px !important;
+    width: 26px !important;
+    margin: 0 0 0 9px !important;
+    padding: 0 !important;
+}
+
+button.vivaldi .vivaldi-v svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.workspace-popup svg {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+#browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar), 
+#browser.linux.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+    min-height: calc(30px / var(--uiZoomLevel));
+    gap: 8px;
+}
+
+.button-toolbar > button {
+    height: 26px !important;
+    min-width: 26px !important;
+}
+
+.button-addressfield,
+.ToolbarButton-Button {
+    border: none !important;
+}
+
+.disable-titlebar#browser.win .window-buttongroup {
+    height: 30px;
+}
+
+.toolbar-large .button-toolbar .button-icon svg {
+    width: 22px;
+    height: 22px;
 }
 
 .toolbar-divider.button-toolbar .button-icon:not(.favicon), 
@@ -62,34 +85,27 @@ hiding elements in different parts of the interface
     height: 15px;
 }
 
-.toolbar-mainbar .toolbar-extensions > .button-toolbar > button, 
-.toolbar-mainbar .page-zoom-controls > .button-toolbar > button, 
-.toolbar-mainbar > .button-toolbar > button, 
-.toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button, 
-.toolbar-mainbar .page-zoom-controls > .toolbar-group > .button-toolbar > button, 
-.toolbar-mainbar > .toolbar-group > .button-toolbar > button {
-    border: 0;
-    border-radius: 0;
-    min-width: 34px;
-    color: inherit;
-    padding: 0;
-    height: 30px;
+#webpage-stack {
+    border-top-left-radius: 6px;
+    overflow: hidden !important;
 }
 
-.disable-titlebar#browser.win .window-buttongroup {
-    height: 32px;
+.separator hr {
+    border: none;
+    border-bottom: 1px solid var(--colorImageFg, var(--colorAccentFg));
 }
 
-/*
+#browser .tab-position .tab.active {
+    background-color: var(--colorAccentBgAlpha) !important;
+}
 
-панель вкладок
-the Tab bar
-
-*/
 #tabs-tabbar-container {
-    padding: 10px 2px 0 0;
-    border-top: 1px solid #555;
-    margin: 12px 15px 0;
+    padding: 8px 6px 0;
+}
+
+.SearchField, .MailSearchField-Inner, .UrlBar-AddressField {
+    background-color: transparent !important;
+    border: none !important;
 }
 
 .color-behind-tabs-on .SearchField:focus-within, 
@@ -99,27 +115,13 @@ the Tab bar
     outline-offset: 0px;
 }
 
-#browser .tab-position .tab.active {
-    background-color: var(--colorAccentBgAlpha) !important;
+.StatusInfo {
+    padding-left: 200px !important;
 }
 
-/*
-
-область просмотра
-viewing area
-
-*/
-#webpage-stack {
-    border-radius: 5px;
+#urlFieldInput,
+.UrlFragment-Wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
 }
-
-.button-textonly.StatusInfo {
-    padding-left: 183px !important;
-}
-
-/*********************************************************************
-
-redefining styles for third-party themes
-переопределяем стили под сторонние темы
-
-**********************************************************************/
