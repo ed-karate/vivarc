@@ -2,10 +2,10 @@
 Making Vivaldi look like Arс
 
 Используется штатный функционал изменения интерфейса браузера Vivaldi через css, не затрагивая файлы самой программы.
-vivwinn.css сделан для стандартной темной темы. Если хотите подогнать под другую, просто переопределите стили в этом же файле ниже.
+vivwinn.css сделан для стандартной темной темы или https://themes.vivaldi.net/themes/EG5l4QyDvLw. Если хотите подогнать под другую, просто переопределите стили в этом же файле ниже.
 ###
 The standard functionality of changing the interface of the Vivaldi browser via css is used, without affecting the files of the program itself.
-vivwinn.css is made for a standard dark theme. If you want to fit another one, just redefine the styles in the same file below.
+vivwinn.css is made for a standard dark theme or https://themes.vivaldi.net/themes/EG5l4QyDvLw. If you want to fit another one, just redefine the styles in the same file below.
 
 Установка:
 1. Открыть vivaldi://experiments
@@ -36,9 +36,10 @@ vivwinn.css is made for a standard dark theme. If you want to fit another one, j
 
 ###
 
-![Снимок экрана 2024-09-02 155632](https://github.com/user-attachments/assets/7cdeccaa-3d73-40eb-af33-93c9cf49bcb4)
-###
-![Снимок экрана 2024-09-02 160207](https://github.com/user-attachments/assets/04f9f020-6e81-49ec-8600-e6d55ef74b38)
 
+
+![Снимок экрана 2024-09-27 113045](https://github.com/user-attachments/assets/38fa63ef-3fc2-421b-8565-6c1778697154)
+###
+![Снимок экрана 2024-09-27 113003](https://github.com/user-attachments/assets/478ac796-4789-45f7-a986-76a8262f9836)
 
 
