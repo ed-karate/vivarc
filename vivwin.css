@@ -1,7 +1,7 @@
 /*
 
 arc colors:
-#282537 - основной
+#1d1a2c - основной
 #e0e1fe - шрифты
 
 */
@@ -12,6 +12,7 @@ arc colors:
 hiding elements in different parts of the interface
 
 */
+.UrlBar-UrlObfuscationWarning,
 .pageload-indicator,
 .pageload-ticker,
 .create-qr-code,
@@ -68,6 +69,35 @@ button.vivaldi .vivaldi-v svg {
     border: none !important;
 }
 
+.UrlBar-UrlFieldWrapper {
+    padding-left: 11px;
+    padding-top: 1px;
+    max-width: 200px;
+}
+
+.SearchField, .MailSearchField-Inner, .UrlBar-AddressField {
+    background-color: transparent !important;
+    border: none !important;
+    flex-grow: 3 !important;
+    justify-content: flex-end !important;
+}
+
+#urlFieldInput {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 11px;
+    border-radius: 4px !important;
+    line-height: 26px;
+}
+
+.UrlFragment-Wrapper {
+    line-height: 26px;
+    padding: 0 10px !important;
+}
+
+.UrlFragment--Highlight {
+    font-size: 11px;
+}
+
 .disable-titlebar#browser.win .window-buttongroup {
     height: 30px;
 }
@@ -83,6 +113,12 @@ button.vivaldi .vivaldi-v svg {
 .toolbar-insideinput .button-toolbar .button-icon svg {
     width: 15px;
     height: 15px;
+}
+
+.toolbar, 
+.toolbar-group, 
+.toolbar-wrap {
+    justify-content: space-evenly;
 }
 
 #webpage-stack {
@@ -101,11 +137,6 @@ button.vivaldi .vivaldi-v svg {
 
 #tabs-tabbar-container {
     padding: 8px 6px 0;
-}
-
-.SearchField, .MailSearchField-Inner, .UrlBar-AddressField {
-    background-color: transparent !important;
-    border: none !important;
 }
 
 .color-behind-tabs-on .SearchField:focus-within, 
